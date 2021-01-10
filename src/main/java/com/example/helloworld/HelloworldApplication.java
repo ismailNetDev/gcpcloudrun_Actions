@@ -13,7 +13,7 @@ public class HelloworldApplication {
 		SpringApplication.run(HelloworldApplication.class, args);
 	}
 
-	@Value("${TARGET:World}")
+	@Value("${TARGET:Udacity}")
 	String target;
 
 	@RestController
@@ -21,7 +21,7 @@ public class HelloworldApplication {
 
 		@GetMapping("/")
 		String hello() {
-			return "Hello " + target + "!";
+			return "Hello From " + target + "!";
 		}
 	}
 
